@@ -1,0 +1,268 @@
+
+                                    /* Main */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f8f9fb;
+    color: #1f2937;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+                                    /* Layout */
+
+main {
+    width: min(100% - 2rem, 1100px);
+    margin: 0 auto;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+                                    /* Header */
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+nav {
+    width: min(100% - 2rem, 1100px);
+    margin: 0 auto;
+    min-height: 64px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.75rem;
+
+    padding: 1rem 0;
+}
+nav > a {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+nav div a {
+    font-size: 0.95rem;
+}
+
+nav div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+}
+
+                                                            /* Hero */
+.hero {
+    padding: 5rem 0 4rem;
+    max-width: 700px;
+}
+.hero h1 {
+    margin: 0.5rem 0 1rem;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 0 2rem;
+}
+.hero p:first-child {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.hero a{
+     display: inline-block;
+
+    padding: 0.85rem 1.25rem;
+
+    border-radius: 10px;
+
+    background: #1f2937;
+    color: #ffffff;
+
+    font-weight: 700;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.hero a:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+.hero a:focus-visible {
+    outline: 3px solid #1f2937;
+    outline-offset: 4px;
+}
+
+                                                            /* Progress bar */
+.progress {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+}
+
+.progress h2 {
+    margin-top: 0;
+}
+.progress [role="progressbar"] {
+    width: 100%;
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 300px;
+    overflow: hidden;
+}
+
+.progress [role="progressbar"] span {
+    display: block;
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: #1f2937;
+}
+
+                                                    /* Learning Path */
+.learningPath h2 {
+    margin-bottom: 0.5rem;
+}
+.learningPath > p {
+    margin-top: 0;
+    color: #6b7280;
+}
+.learningPath ol{
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.learningPath li {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.25rem;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+.learningPath li:hover {
+    transform: translateY(-2px);
+    border-color: #d1d5db;
+}
+
+.learningPath a {
+    display: block;
+    font-weight: 600;
+}
+.learningPath a:focus-visible {
+    outline: 3px solid #1f2937;
+    outline-offset: 4px;
+}
+
+                                                        /* Projects */
+.projects {
+    display: grid;
+    gap: 1rem;
+}
+.projects h2, .projects p {
+    grid-column: 1 / -1;
+}
+.projects h2 {
+     margin-bottom: 0;
+}
+
+.projects a {
+    display: block;
+
+    padding: 1.25rem;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.projects a:hover {
+    transform: translateY(-2px);
+    border-color: #d1d5db;
+}
+
+.projects a:focus-visible {
+    outline: 3px solid #1f2937;
+    outline-offset: 4px;
+}
+
+                                                            /* Footer */
+
+footer {
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+}
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+                                                        /* Media query */
+@media (min-width: 768px) {
+    main {
+        width: min(100% - 4rem, 1100px);
+    }
+
+    nav {
+        width: min(100% - 4rem, 1100px);
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0;
+    }
+
+    .learningPath ol {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .progress {
+        padding: 2rem;
+    }
+}
+
+
+
