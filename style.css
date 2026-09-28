@@ -1,5 +1,5 @@
+                                                    /* Main */
 
-                                    /* Main */
 * {
     box-sizing: border-box;
 }
@@ -9,7 +9,6 @@ html {
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background: #f8f9fb;
@@ -26,18 +25,26 @@ img {
     display: block;
 }
 
-                                    /* Layout */
+
+                                                        /* Layout */
 
 main {
     width: min(100% - 2rem, 1100px);
-    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    margin-inline: auto;
 }
 
 section {
     padding: 4rem 0;
 }
 
-                                    /* Header */
+
+                                                    /* Header */
+
 header {
     background: #ffffff;
     border-bottom: 1px solid #e5e7eb;
@@ -45,7 +52,6 @@ header {
 
 nav {
     width: min(100% - 2rem, 1100px);
-    margin: 0 auto;
     min-height: 64px;
 
     display: flex;
@@ -55,7 +61,10 @@ nav {
     gap: 0.75rem;
 
     padding: 1rem 0;
+
+    margin-inline: auto;
 }
+
 nav > a {
     font-size: 1.25rem;
     font-weight: 700;
@@ -72,13 +81,23 @@ nav div {
     gap: 0.75rem 1rem;
 }
 
+
                                                             /* Hero */
+
 .hero {
-    padding: 5rem 0 4rem;
     max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    padding: 5rem 0 4rem;
 }
+
 .hero h1 {
-    margin: 0.5rem 0 1rem;
+    margin: 0;
+
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     line-height: 1.05;
     letter-spacing: -0.03em;
@@ -86,16 +105,17 @@ nav div {
 
 .hero p {
     max-width: 600px;
-    margin: 0 0 2rem;
-}
-.hero p:first-child {
+
     margin: 0;
+}
+
+.hero p:first-child {
     font-weight: 700;
     font-size: 0.95rem;
 }
 
-.hero a{
-     display: inline-block;
+.hero a {
+    display: inline-block;
 
     padding: 0.85rem 1.25rem;
 
@@ -106,70 +126,104 @@ nav div {
 
     font-weight: 700;
 
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
 }
+
 .hero a:hover {
     transform: translateY(-2px);
     opacity: 0.9;
 }
+
 .hero a:focus-visible {
     outline: 3px solid #1f2937;
     outline-offset: 4px;
 }
 
-                                                            /* Progress bar */
+
+                                                        /* Progress Bar */
+
 .progress {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
     background: #ffffff;
+
     padding: 2rem;
+
     border-radius: 16px;
     border: 1px solid #e5e7eb;
 }
 
-.progress h2 {
-    margin-top: 0;
+.progress h2,
+.progress p {
+    margin: 0;
 }
+
 .progress [role="progressbar"] {
     width: 100%;
     height: 12px;
+
     background: #e5e7eb;
+
     border-radius: 300px;
+
     overflow: hidden;
 }
 
 .progress [role="progressbar"] span {
     display: block;
+
     width: 0%;
     height: 100%;
+
     border-radius: inherit;
+
     background: #1f2937;
 }
 
+
                                                     /* Learning Path */
-.learningPath h2 {
-    margin-bottom: 0.5rem;
+
+.learningPath {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+
+.learningPath h2,
 .learningPath > p {
-    margin-top: 0;
+    margin: 0;
+}
+
+.learningPath > p {
     color: #6b7280;
 }
-.learningPath ol{
+
+.learningPath ol {
     display: grid;
     gap: 1rem;
-    margin: 2rem 0 0;
+
     padding: 0;
+
     list-style: none;
 }
 
 .learningPath li {
     background: #ffffff;
+
     border: 1px solid #e5e7eb;
     border-radius: 12px;
+
     padding: 1.25rem;
 
     transition:
         transform 0.2s ease,
         border-color 0.2s ease;
 }
+
 .learningPath li:hover {
     transform: translateY(-2px);
     border-color: #d1d5db;
@@ -177,23 +231,28 @@ nav div {
 
 .learningPath a {
     display: block;
+
     font-weight: 600;
 }
+
 .learningPath a:focus-visible {
     outline: 3px solid #1f2937;
     outline-offset: 4px;
 }
 
-                                                        /* Projects */
+
+                                                /* Projects */
+
 .projects {
     display: grid;
     gap: 1rem;
 }
-.projects h2, .projects p {
+
+.projects h2,
+.projects p {
     grid-column: 1 / -1;
-}
-.projects h2 {
-     margin-bottom: 0;
+
+    margin: 0;
 }
 
 .projects a {
@@ -202,6 +261,7 @@ nav div {
     padding: 1.25rem;
 
     background: #ffffff;
+
     border: 1px solid #e5e7eb;
     border-radius: 12px;
 
@@ -222,22 +282,34 @@ nav div {
     outline-offset: 4px;
 }
 
-                                                            /* Footer */
+
+                                                /* Footer */
 
 footer {
-    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+
     padding: 2rem 1rem;
-    text-align: center;
+
     background: #ffffff;
+
     border-top: 1px solid #e5e7eb;
 }
+
 footer p {
     margin: 0;
+
     font-size: 0.9rem;
     color: #6b7280;
 }
-                                                        /* Media query */
+
+
+                                        /* Media Query */
+
 @media (min-width: 768px) {
+
     main {
         width: min(100% - 4rem, 1100px);
     }
@@ -259,10 +331,8 @@ footer p {
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .progress {
         padding: 2rem;
     }
 }
-
-
-
