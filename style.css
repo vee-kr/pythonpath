@@ -11,8 +11,9 @@ html {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background: #f8f9fb;
+    /*background: #f8f9fb;*/
     color: #1f2937;
+    background: #eaf4f4;
 }
 
 a {
@@ -33,13 +34,13 @@ main {
 
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
 
     margin-inline: auto;
 }
 
 section {
-    padding: 4rem 0;
+    padding: 1.5rem 0;
 }
 
 
@@ -47,7 +48,23 @@ section {
 
 header {
     background: #ffffff;
+    border-radius: 999px;
     border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.logo img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
 }
 
 nav {
@@ -296,6 +313,7 @@ footer {
     background: #ffffff;
 
     border-top: 1px solid #e5e7eb;
+    border-radius: 999px;
 }
 
 footer p {

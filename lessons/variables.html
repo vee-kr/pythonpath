@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variables & Data Types — PythonPath</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../lesson.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css"
+    >
+
+    <script src="../script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="../index.html" class="logo">
+            <img src="/assets/images/logo.png" alt="PythonPath logo">
+            <span>PythonPath</span>
+        </a>
+
+
+        <div>
+            <a href="../index.html#learningPath">Learning Path</a>
+            <a href="../index.html#projects">Projects</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <article class="lesson" data-lesson="variables">
+
+        <header class="lessonHeader">
+            <p class="lessonNumber">Lesson 2</p>
+
+            <h1>Variables &amp; Data Types</h1>
+
+            <p class="lessonDescription">
+                Learn how to store information in variables and
+                understand the basic data types used in Python.
+            </p>
+        </header>
+
+         <section class="lessonSection">
+
+            <h2>What is a variable?</h2>
+
+            <p>
+                A variable is a name that refers to a value.
+                You can use variables to store information in your program.
+            </p>
+
+            <p>
+                For example, you can store someone's name and age
+                in variables:
+            </p>
+
+            <pre><code class="language-python">name = "Vee"
+age = 17</code></pre>
+
+            <p>
+                Here, <code>name</code> refers to the text
+                <code>"Vee"</code>, and <code>age</code> refers to
+                the number <code>17</code>.
+            </p>
+
+            <p>
+                You can then use those variables later in your program.
+            </p>
+
+            <pre><code class="language-python">name = "Vee"
+
+print(name)</code></pre>
+
+            <p>
+                The output is:
+            </p>
+
+            <pre><code>Vee</code></pre>
+
+        </section>
+
+         <section class="lessonSection">
+
+            <h2>Creating a variable</h2>
+
+            <p>
+                To create a variable, write a variable name,
+                followed by the <code>=</code> sign, followed by a value.
+            </p>
+
+            <pre><code class="language-python">name = "Vee"
+age = 17
+city = "New York"</code></pre>
+
+            <p>
+                The <code>=</code> sign assigns a value to a variable.
+                In this example, Python stores <code>"Vee"</code>
+                under the name <code>name</code>.
+            </p>
+
+            <p>
+                You can create as many variables as you need.
+            </p>
+
+            <pre><code class="language-python">name = "Vee"
+age = 17
+favorite_color = "red"
+
+print(name)
+print(age)
+print(favorite_color)</code></pre>
+
+            <p>
+                The output is:
+            </p>
+
+            <pre><code>Vee
+17
+red</code></pre>
+
+        </section>
+
+        <section class="lessonSection">
+
+            <h2>Changing a variable</h2>
+
+            <p>
+                A variable can refer to a different value later
+                in your program.
+            </p>
+
+            <pre><code class="language-python">age = 17
+
+print(age)
+
+age = 18
+
+print(age)</code></pre>
+
+            <p>
+                The output is:
+            </p>
+
+            <pre><code>17
+18</code></pre>
+
+            <p>
+                After <code>age = 18</code>, the variable
+                <code>age</code> refers to <code>18</code>.
+            </p>
+
+        </section>
+
+        <section class="lessonSection">
+
+            <h2>Naming variables</h2>
+
+            <p>
+                Choosing clear variable names makes your code
+                easier to understand.
+            </p>
+
+            <p>
+                Python variable names can contain letters, numbers,
+                and underscores.
+            </p>
+
+            <pre><code class="language-python">first_name = "Vee"
+age2 = 17
+favorite_color = "red"</code></pre>
+
+            <p>
+                A variable name cannot start with a number.
+            </p>
+
+            <p>
+                This is incorrect:
+            </p>
+
+            <pre><code class="language-python">2age = 17</code></pre>
+
+            <p>
+                A variable name also cannot contain spaces.
+                Use an underscore instead.
+            </p>
+
+            <pre><code class="language-python">favorite_color = "red"</code></pre>
+
+            <p>
+                Python is case-sensitive, so these are different
+                variable names:
+            </p>
+
+            <pre><code class="language-python">name = "Vee"
+Name = "Kate"</code></pre>
+
+            <p>
+                It is also a good idea to choose names that describe
+                the information they contain.
+            </p>
+
+            <pre><code class="language-python">age = 17</code></pre>
+
+            <p>
+                is easier to understand than:
+            </p>
+
+            <pre><code class="language-python">x = 17</code></pre>
+
+        </section>
+
+        <section class="lessonSection">
+
+            <h2>What are data types?</h2>
+
+            <p>
+                A data type describes what kind of value you are
+                working with.
+            </p>
+
+            <p>
+                Python has many data types. In this lesson,
+                we will focus on four basic types:
+            </p>
+
+            <ul>
+                <li><code><strong>int</strong></code> — whole numbers</li>
+                <li><code><strong>float</strong></code> — numbers with a decimal point</li>
+                <li><code><strong>str</strong></code> — text</li>
+                <li><code><strong>bool</strong></code> — true or false values</li>
+            </ul>
+
+            <p>
+                Understanding data types is important because
+                different types of values can be used in different ways.
+            </p>
+
+        </section>
+
+        <section class="lessonSection">
+
+            <h2>Integers — <code>int</code></h2>
+
+            <p>
+                An integer is a whole number without a decimal point.
+            </p>
+
+            <pre><code class="language-python">age = 17
+year = 2026
+temperature = 10</code></pre>
+
+            <p>
+                Positive numbers, negative numbers, and zero can all
+                be integers.
+            </p>
+
+            <pre><code class="language-python">positive = 9
+negative = -69
+zero = 0</code></pre>
+
+        </section>
+
+        <section class="lessonSection">
+
+            <h2>Floating-point numbers — <code>float</code></h2>
+
+            <p>
+                A floating-point number, usually called a float,
+                is a number that contains a decimal point.
+            </p>
+
+            <pre><code class="language-python">height = 1.59
+temperature = 14.5
+price = 199.99</code></pre>
+
+            <p>
+                Floats are useful when you need values that are
+                not whole numbers.
+            </p>
+
+        </section>
+
+        <section class="lessonSection">
+
+            <h2>Strings — <code>str</code></h2>
+
+            <p>
+                A string is a sequence of characters used to represent
+                text.
+            </p>
+
+            <pre><code class="language-python">name = "Vee"
+city = "New York"
+message = "Hey!"</code></pre>
+
+            <p>
+                Strings are usually written inside single or double
+                quotation marks.
+            </p>
+
+            <pre><code class="language-python">name = "Vee"
+name = 'Vee'</code></pre>
+
+            <p>
+                Both examples create a string containing the text
+                <code>Vee</code>.
+            </p>
+
+        </section>
+
+        <section class="lessonSection">
+
+            <h2>Booleans — <code>bool</code></h2>
+
+            <p>
+                A Boolean is a value that can be either
+                <code>True</code> or <code>False</code>.
+            </p>
+
+            <pre><code class="language-python">is_student = True
+is_tired = False</code></pre>
+
+            <p>
+                Booleans are especially useful when a program needs
+                to make decisions. You will use them more when we
+                learn about conditions.
+            </p>
+
+            <p>
+                Notice that <code>True</code> and <code>False</code>
+                start with capital letters. They are special Python
+                values.
+            </p>
+
+        </section>
+
+         <section class="lessonSection">
+
+            <h2>Checking a data type with <code>type()</code></h2>
+
+            <p>
+                Python has a built-in function called
+                <code>type()</code> that tells you what type of value
+                you are working with.
+            </p>
+
+            <pre><code class="language-python">age = 17
+
+print(type(age))</code></pre>
+
+            <p>
+                The output is:
+            </p>
+
+            <pre><code>&lt;class 'int'&gt;</code></pre>
+
+            <p>
+                You can also check other values:
+            </p>
+
+            <pre><code class="language-python">name = "Vee"
+height = 1.59
+is_student = True
+
+print(type(name))
+print(type(height))
+print(type(is_student))</code></pre>
+
+            <p>
+                Python will show that these values are
+                <code>str</code>, <code>float</code>, and
+                <code>bool</code>.
+            </p>
+
+        </section>
+
+        <section class="lessonSection">
+
+            <h2>Basic arithmetic</h2>
+
+            <p>
+                Variables can store numbers that you can use
+                in calculations.
+            </p>
+
+            <pre><code class="language-python">boys = 3
+girls = 17
+
+total = boys + girls
+
+print(total)</code></pre>
+
+            <p>
+                The output is:
+            </p>
+
+            <pre><code>20</code></pre>
+
+            <p>
+                Python supports several basic arithmetic operators:
+            </p>
+
+            <ul>
+                <li><code><strong>+</strong></code> — addition</li>
+                <li><code><strong>-</strong></code> — subtraction</li>
+                <li><code><strong>*</strong></code> — multiplication</li>
+                <li><code><strong>/</strong></code> — division</li>
+            </ul>
+
+            <pre><code class="language-python">a = 29
+b = 5
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)</code></pre>
+
+        </section>
+
+        <section class="lessonSection">
+
+            <h2>Common beginner mistakes</h2>
+
+            <p>
+                Variables are simple once you understand the basic
+                rules, but beginners often make a few common mistakes.
+            </p>
+
+            <p>
+                <strong>Starting a variable name with a number:</strong>
+            </p>
+
+            <pre><code class="language-python">1name = "Vee"</code></pre>
+
+            <p>
+                This is not a valid Python variable name.
+            </p>
+
+            <p>
+                <strong>Using spaces in a variable name:</strong>
+            </p>
+
+            <pre><code class="language-python">first name = "Vee"</code></pre>
+
+            <p>
+                Use an underscore instead:
+            </p>
+
+            <pre><code class="language-python">first_name = "Vee"</code></pre>
+
+            <p>
+                <strong>Confusing strings and numbers:</strong>
+            </p>
+
+            <pre><code class="language-python">age = "17"
+age = 17</code></pre>
+
+            <p>
+                These two values look similar, but they have different
+                data types. The first is a string, while the second
+                is an integer.
+            </p>
+
+        </section>
+
+        <section class="lessonPractice">
+
+            <h2>Practice</h2>
+
+            <p>
+                Try these tasks before moving to the mini task.
+            </p>
+
+            <p>
+                <strong>Task 1:</strong>
+                Create variables for your name, age, and favorite hobby.
+                Print all three variables.
+            </p>
+
+            <p>
+                <strong>Task 2:</strong>
+                Create two number variables and print their sum,
+                difference, and product.
+            </p>
+
+            <p>
+                <strong>Task 3:</strong>
+                Create one variable for each of these data types:
+                <code>int</code>, <code>float</code>, <code>str</code>,
+                and <code>bool</code>. Use <code>type()</code> to
+                check each one.
+            </p>
+
+        </section>
+
+        <section class="lessonPractice">
+
+            <h2>Mini Task: About Me</h2>
+
+            <p>
+                Create a Python program that stores information
+                about yourself in variables.
+            </p>
+
+            <p>
+                Your program should have variables for your name,
+                age, favorite hobby, and whether you are currently
+                learning Python.
+            </p>
+
+            <p>
+                Then use <code>print()</code> to display the values.
+            </p>
+
+            <p>
+                Try to choose clear variable names and use the
+                correct data type for each value.
+            </p>
+
+        </section>
+
+         <button class="lessonComplete" type="button">
+            Mark lesson as complete
+        </button>
+
+        <nav class="lessonNavigation" aria-label="Lesson navigation">
+
+            <a href="getting-started.html">
+                ← Previous Lesson
+            </a>
+
+            <a href="input-output.html">
+                Next Lesson →
+            </a>
+
+        </nav>
+
+    </article>
+
+</main>
+
+<footer>
+    <p>Python Path</p>
+    <p>@ Designed by Vasilisa Korchagina, 2026</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>

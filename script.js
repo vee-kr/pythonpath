@@ -6,9 +6,22 @@ if (progressBar && progressText) {
     const totalLessons = 8;
     let completedLessons = 0;
 
-    if (localStorage.getItem("gettingStarted") === "completed") {
-        completedLessons++;
-    }
+    const lessonsIds = ["gettingStarted",
+                                "variables",
+                                "inputOutput",
+                                "conditions",
+                                "loops",
+                                "strings",
+                                "lists",
+                                "functions"];
+
+    lessonsIds.forEach(function(lessonId){
+        if (localStorage.getItem(lessonId) === "completed") {
+            completedLessons++;
+        }
+
+    });
+
     progressText.textContent = `${completedLessons} of ${totalLessons} lessons completed`;
     progressBar.setAttribute("aria-valuenow", completedLessons);
 
@@ -24,15 +37,20 @@ if (progressBar && progressText) {
                                         /* Getting Started page */
 
 const lesson = document.querySelector(".lesson");
-const completeButton = document.querySelector(".lessonComplete");
-const lessonId = lesson.dataset.lesson;
 
-const isCompleted = localStorage.getItem(lessonId);
-if (isCompleted === "completed") {
-    completeButton.textContent = "Lesson completed";
+
+if (lesson) {
+    const completeButton = document.querySelector(".lessonComplete");
+    const lessonId = lesson.dataset.lesson;
+
+    const isCompleted = localStorage.getItem(lessonId);
+    if (isCompleted === "completed") {
+        completeButton.textContent = "Lesson completed";
+    }
+    completeButton.addEventListener("click", function() {
+        localStorage.setItem(lessonId, "completed");
+
+        completeButton.textContent = "Lesson completed";
+    });
+
 }
-completeButton.addEventListener("click", function() {
-    localStorage.setItem(lessonId, "completed");
-
-    completeButton.textContent = "Lesson completed";
-});
