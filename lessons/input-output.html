@@ -128,7 +128,44 @@ hobby = input("What is your hobby? ")
 print("Your name is", name)
 print("Your hobby is", hobby)</code></pre>
         </section>
+        <section class="lessonSection">
+    <h2>Working with numbers</h2>
 
+    <p>
+        The <code>input()</code> function returns the user's
+        answer as a string, even when the user enters a number.
+    </p>
+
+    <pre><code class="language-python">age = input("How old are you? ")
+print(age)</code></pre>
+
+    <p>
+        If the user enters <code>15</code>, Python stores
+        <code>"15"</code> as text, not as an integer.
+    </p>
+
+    <p>
+        To convert this text into a whole number, we can use
+        <code>int()</code>.
+    </p>
+
+    <pre><code class="language-python">age = int(input("How old are you? "))
+print(age + 1)</code></pre>
+
+    <p>
+        If the user enters <code>15</code>, the output will be:
+    </p>
+
+    <pre><code>16</code></pre>
+
+    <p>
+        We use <code>float()</code> when we need a number
+        that can contain a decimal part.
+    </p>
+
+    <pre><code class="language-python">price = float(input("Enter the price: "))
+print(price)</code></pre>
+</section>
     </article>
 
 </main>
